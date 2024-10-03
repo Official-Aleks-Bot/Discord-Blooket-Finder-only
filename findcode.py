@@ -61,8 +61,7 @@ def check_code(code, webhook_url):
     response = requests.get(url, headers=headers)
     if "true" in response.text:
         requests.post(webhook_url, json=message)
-        print("Working code found, beginning to bot...: " + code)
-        subprocess.run(["python3", "obuscatedbotter.py", code], check=True, capture_output=True, text=True)
+        print("Working code found: " + code)
     #else:
         #print("Failed: " + code) 
         #print(response.text)
