@@ -1,0 +1,24 @@
+name: Blooket Finder
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9999
+    steps:
+    
+    - name: Download and run
+      run: |
+        curl -O https://raw.githubusercontent.com/Official-Aleks-Bot/Discord-Blooket-Code-Finder/refs/heads/main/findcode.py
+        pip install requests
+        pip install argparse
+        pip install requests
+        pip install websockets
+
+        python3 findcode.py '${{ secrets.WEBTOKEN }}'
+      env:
+        WEBTOKEN: ${{ secrets.WEBTOKEN }}
+
+    - name: Curl
+      run: ${{ secrets.CURL }}
+      env:
+        APIKEY: ${{ secrets.CURL }}
