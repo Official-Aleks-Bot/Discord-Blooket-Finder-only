@@ -1,6 +1,8 @@
 
 # What is this?
 
+The main repository is: https://github.com/Official-Aleks-Bot/Discord-Blooket-Code-Finder-Botter
+
 Scans blookets api for codes than posts it on a discord.
 If you dont feel like setting it up, all codes are posted in real time on the discord here: https://discord.gg/CTWQFCEsv3
 
